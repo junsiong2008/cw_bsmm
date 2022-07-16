@@ -9,22 +9,6 @@ import 'package:cw_bsmm/services/analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// Move texteditingcontroller and radiobutton form state to provider - done
-// Add unit list to constants - done
-// Make Firebase Service - done
-// Link Firebase with UI - done
-// Reset Form State after submit / close - done
-// Configure Firebase App Check for the project - done
-// Try to push one record to Firestore - done
-// Add validation to Text Field - done
-// Add formatter to Text Field - done
-// TODO: Refactor code for readability
-// Firebase exception handling
-// Add Roboto font for Safari Browser support
-// Expand error form section instead of showing error message - done
-// Add Countdown timer at home screen - done
-// Add RegistrationDate field - done
-
 class RegistrationForm extends StatefulWidget {
   const RegistrationForm({Key? key}) : super(key: key);
 

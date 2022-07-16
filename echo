@@ -1,0 +1,13 @@
+total 29
+-rwxrwxrwx 1 junsiong junsiong  4628 Jul 16 16:24 pubspec.yaml
+-rwxrwxrwx 1 junsiong junsiong   566 Jul 16 19:34 README.md
+drwxrwxrwx 1 junsiong junsiong   512 Jul 16 19:34 test
+-rwxrwxrwx 1 junsiong junsiong  1482 Jul 16 19:34 analysis_options.yaml
+-rwxrwxrwx 1 junsiong junsiong   913 Jul 16 19:34 cw_bsmm.iml
+drwxrwxrwx 1 junsiong junsiong   512 Jul 16 19:36 assets
+-rwxrwxrwx 1 junsiong junsiong 10273 Jul 16 19:37 pubspec.lock
+drwxrwxrwx 1 junsiong junsiong   512 Jul 16 22:55 lib
+drwxrwxrwx 1 junsiong junsiong   512 Jul 16 23:49 web
+drwxrwxrwx 1 junsiong junsiong   512 Jul 16 23:51 build
+-rwxrwxrwx 1 junsiong junsiong   239 Jul 17 00:24 firebase.json
+-rwxrwxrwx 1 junsiong junsiong     0 Jul 17 00:45 echo

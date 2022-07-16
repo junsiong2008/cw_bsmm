@@ -4,6 +4,7 @@ class Analytics {
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   static FirebaseAnalyticsObserver observer =
       FirebaseAnalyticsObserver(analytics: analytics);
+
   static Future<void> logAnalyticsEvent({
     required String eventName,
     required String eventParam,
