@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/summer_night.jpg'),
+                image: AssetImage('assets/images/summer_night.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
                     runSpacing: 8.0,
                     children: [
                       Image.asset(
-                        'images/bsmm_logo.png',
+                        'assets/images/bsmm_logo.png',
                         height: 50,
                       ),
                       const Text(
