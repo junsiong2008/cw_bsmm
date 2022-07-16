@@ -14,18 +14,18 @@ jobs:
       - run: |
           mkdir lib/auth
           echo $SECRETS_FILE_CONTENTS | base64 -d > lib/auth/secrets.dart 
-          echo "$(lib/auth/secrets.dart)"
-          sudo snap install flutter --classic
-          flutter channel stable
-          flutter config --enable-web
-          flutter pub get
-          flutter build web
+          sudo echo "$(lib/auth/secrets.dart)"
+          #sudo snap install flutter --classic
+          #flutter channel stable
+          #flutter config --enable-web
+          #flutter pub get
+          #flutter build web
         env:
           SECRETS_FILE_CONTENTS: ${{ secrets.SECRETS_FILE_CONTENTS }}
         
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CW_BSMM_PRD }}'
-          channelId: live
-          projectId: cw-bsmm-prd
+      #- uses: FirebaseExtended/action-hosting-deploy@v0
+        #with:
+          #repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          #firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CW_BSMM_PRD }}'
+          #channelId: live
+          #projectId: cw-bsmm-prd
