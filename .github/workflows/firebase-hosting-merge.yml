@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          ls -lrt
           ls -lrt lib
           ls -lrt lib/auth
           echo $SECRETS_FILE_CONTENTS | base64 -d > lib/auth/secrets.dart 
