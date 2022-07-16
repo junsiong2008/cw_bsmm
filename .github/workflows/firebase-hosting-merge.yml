@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          ls -lrt lib
-          ls -lrt lib/auth
+          mkdir lib/auth
           echo $SECRETS_FILE_CONTENTS | base64 -d > lib/auth/secrets.dart 
           sudo snap install flutter --classic
           flutter channel stable
