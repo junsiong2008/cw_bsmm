@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo $SECRETS_FILE_CONTENTS | base64 -d > lib/path/to/secrets.dart 
+          echo $SECRETS_FILE_CONTENTS | base64 -d > lib/auth/secrets.dart 
           sudo snap install flutter --classic
           flutter channel stable
           flutter config --enable-web
