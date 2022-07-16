@@ -12,18 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          mkdir lib/auth
+          sudo mkdir lib/auth
           echo $SECRETS_FILE_CONTENTS | base64 -di > lib/auth/secrets.dart 
-          echo $SECRETS_FILE_CONTENTS | base64 -d > output.txt
-          cat output.txt
-          
           sudo snap install flutter --classic
           flutter channel stable
           flutter config --enable-web
           flutter pub get
           flutter build web
         env:
-          SECRETS_FILE_CONTENTS: ${{ secrets.SECRETS_FILE_CONTENTS }}
+          SECRETS_FILE_CONTENT: ${{ secrets.SECRETS_FILE_CONTENT }}
         
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
