@@ -14,10 +14,10 @@ jobs:
       - run: |
           mkdir lib/auth
           echo $SECRETS_FILE_CONTENTS | base64 -d > lib/auth/secrets.dart 
-          echo $SECRETS_FILE_CONTENTS | base64 -d 
+          echo < $SECRETS_FILE_CONTENTS | base64 -d 
           echo ########
           cd lib/auth
-          sudo printf '%b\n' "$(secrets.dart)"
+          echo "$(<secrets.dart)"
           #sudo snap install flutter --classic
           #flutter channel stable
           #flutter config --enable-web
