@@ -32,7 +32,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // resizeToAvoidBottomInset: true,
       body: Stack(
         alignment: Alignment.center,
         children: <Widget>[
@@ -62,7 +61,6 @@ class HomePage extends StatelessWidget {
                   Wrap(
                     crossAxisAlignment: WrapCrossAlignment.center,
                     alignment: WrapAlignment.center,
-                    // runAlignment: WrapAlignment.center,
                     spacing: 16.0,
                     runSpacing: 8.0,
                     children: [
