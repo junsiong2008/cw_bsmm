@@ -27,7 +27,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.days}', colors: const <Color>[
+                GradientText('${time.days}', colors: <Color>[
                   Color(0XFFFF930F),
                   Color(0XFFFFF95B),
                 ]),
@@ -40,7 +40,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.min}', colors: const <Color>[
+                GradientText('${time.min}', colors: <Color>[
                   Color(0xFFFFFB7D),
                   Color(0XFF85FFBD),
                 ]),
@@ -53,7 +53,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.min}', colors: const <Color>[
+                GradientText('${time.min}', colors: <Color>[
                   Color(0XFF8EC5FC),
                   Color(0XFFE0C3F3),
                 ]),
@@ -68,7 +68,7 @@ class CountdownGroup extends StatelessWidget {
               children: [
                 GradientText(
                   '${time.sec}',
-                  colors: const <Color>[
+                  colors: <Color>[
                     Color(0XFF8BC6EC),
                     Color(0XFF9599E2),
                   ],
