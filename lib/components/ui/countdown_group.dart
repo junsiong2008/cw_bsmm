@@ -81,12 +81,10 @@ class CountdownGroup extends StatelessWidget {
                 //     Color(0XFFE0C3F3),
                 //   ]),
                 // ),
-                Text(
-                  '${time.min}',
-                  style: kCountdownNumberTextStyle.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
+                GradientText('${time.min}', colors: <Color>[
+                  Color(0XFF8EC5FC),
+                  Color(0XFFE0C3F3),
+                ]),
                 const Text(
                   'MINS',
                   style: kCountdownSubtitleTextStyle,
