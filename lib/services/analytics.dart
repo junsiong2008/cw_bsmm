@@ -1,4 +1,5 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter/cupertino.dart';
 
 class Analytics {
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
@@ -9,6 +10,7 @@ class Analytics {
     required String eventName,
     required String eventParam,
   }) async {
+    debugPrint("Analytics log event: $eventName");
     await Analytics.analytics.logEvent(
       name: eventName,
       parameters: <String, dynamic>{

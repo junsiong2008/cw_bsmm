@@ -7,13 +7,23 @@ import 'package:cw_bsmm/providers/registration_state_provider.dart';
 import 'package:cw_bsmm/components/ui/registration_form.dart';
 import 'package:cw_bsmm/services/analytics.dart';
 import 'package:cw_bsmm/shared/constants.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+  // TODO: Change this later
   const HomePage({
     Key? key,
+    required this.analytics,
+    required this.observer,
   }) : super(key: key);
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
+
+  // const HomePage({
+  //   Key? key,
+  // }) : super(key: key);
 
   void closeModalBottomSheet(BuildContext context) {
     var registrationStateProvider = Provider.of<RegistrationStateProvider>(
@@ -144,6 +154,13 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       onPressed: () async {
+                        await analytics.logEvent(
+                          name: 'test_event_two',
+                          parameters: <String, dynamic>{
+                            'string': 'test_event_2'
+                          },
+                        );
+                        // TODO: Change this
                         await Analytics.logAnalyticsEvent(
                           eventName: 'display_registration_form',
                           eventParam: 'Display registration form',

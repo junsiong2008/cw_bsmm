@@ -3,6 +3,7 @@ import 'package:cw_bsmm/providers/registration_form_provider.dart';
 import 'package:cw_bsmm/providers/registration_state_provider.dart';
 import 'package:cw_bsmm/screens/home/home_page.dart';
 import 'package:cw_bsmm/shared/constants.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -35,6 +36,10 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  // TODO: Remove this later
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
 
   // This widget is the root of your application.
   @override
@@ -48,7 +53,11 @@ class MyApp extends StatelessWidget {
           primary: kPrimaryColor,
         ),
       ),
-      home: const HomePage(),
+      // home: const HomePage(),
+      home: HomePage(
+        analytics: analytics,
+        observer: observer,
+      ),
     );
   }
 }
