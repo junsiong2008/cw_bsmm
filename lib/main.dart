@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorObservers: <NavigatorObserver>[observer],
       // navigatorObservers: <NavigatorObserver>[Analytics.observer],
       title: 'BSMM 55th Enrollment Ceremony',
       theme: ThemeData(
