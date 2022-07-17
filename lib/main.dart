@@ -3,7 +3,6 @@ import 'package:cw_bsmm/providers/registration_form_provider.dart';
 import 'package:cw_bsmm/providers/registration_state_provider.dart';
 import 'package:cw_bsmm/screens/home/home_page.dart';
 import 'package:cw_bsmm/shared/constants.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +42,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: <NavigatorObserver>[Analytics.observer],
-      title: 'BSMM 55th Enrollment Ceremony',
+      title: 'BSMM 55th Enrolment Ceremony',
       theme: ThemeData(
         fontFamily: 'Roboto',
         colorScheme: ColorScheme.fromSwatch().copyWith(
