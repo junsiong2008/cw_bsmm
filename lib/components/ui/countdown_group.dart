@@ -4,13 +4,15 @@ import 'package:flutter_countdown_timer/index.dart';
 import 'package:flutter/material.dart';
 
 class CountdownGroup extends StatelessWidget {
-  const CountdownGroup({Key? key}) : super(key: key);
+  const CountdownGroup({
+    Key? key,
+    required this.millisecondsToDate,
+  }) : super(key: key);
+
+  final int millisecondsToDate;
 
   @override
   Widget build(BuildContext context) {
-    final int millisecondsToDate =
-        DateTime.parse('2022-08-20 19:00:00Z').millisecondsSinceEpoch;
-
     return CountdownTimer(
       endTime: millisecondsToDate,
       widgetBuilder: (BuildContext context, CurrentRemainingTime? time) {
