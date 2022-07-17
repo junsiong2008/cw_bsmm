@@ -19,6 +19,9 @@ jobs:
           flutter config --enable-web
           flutter pub get
           flutter build web
+        env:
+            SECRETS_FILE_CONTENT: ${{ secrets.SECRETS_FILE_CONTENT }}
+            
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
