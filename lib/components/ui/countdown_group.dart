@@ -27,14 +27,10 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // GradientText(
-                //   '${time.days}',
-                //   style: kCountdownNumberTextStyle,
-                //   gradient: const LinearGradient(colors: [
-                //     Color(0XFFff930f),
-                //     Color(0XFFfff95b),
-                //   ]),
-                // ),
+                GradientText('${time.days}', colors: const <Color>[
+                  Color(0XFFFF930F),
+                  Color(0XFFFFF95B),
+                ]),
                 Text(
                   '${time.days}',
                   style: kCountdownNumberTextStyle.copyWith(
@@ -50,20 +46,10 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // GradientText(
-                //   '${time.hours}',
-                //   style: kCountdownNumberTextStyle,
-                //   gradient: const LinearGradient(colors: [
-                //     Color(0xfffffb7d),
-                //     Color(0xff85FFBD),
-                //   ]),
-                // ),
-                Text(
-                  '${time.hours}',
-                  style: kCountdownNumberTextStyle.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
+                GradientText('${time.min}', colors: const <Color>[
+                  Color(0xFFFFFB7D),
+                  Color(0XFF85FFBD),
+                ]),
                 const Text(
                   'HOURS',
                   style: kCountdownSubtitleTextStyle,
@@ -73,15 +59,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // GradientText(
-                //   '${time.min}',
-                //   style: kCountdownNumberTextStyle,
-                //   gradient: const LinearGradient(colors: [
-                //     Color(0XFF8EC5FC),
-                //     Color(0XFFE0C3F3),
-                //   ]),
-                // ),
-                GradientText('${time.min}', colors: <Color>[
+                GradientText('${time.min}', colors: const <Color>[
                   Color(0XFF8EC5FC),
                   Color(0XFFE0C3F3),
                 ]),
@@ -94,27 +72,13 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // GradientText(
-                //   '${time.sec}',
-                //   style: kCountdownNumberTextStyle,
-                //   gradient: const LinearGradient(colors: [
-                //     Color(0XFF8BC6EC),
-                //     Color(0XFF9599E2),
-                //   ]),
-                // ),
-                ShaderMask(
-                  blendMode: BlendMode.srcIn,
-                  shaderCallback: (bounds) => const LinearGradient(
-                          colors: [Color(0XFF8BC6EC), Color(0XFF9599E2)])
-                      .createShader(
-                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
-                  ),
-                  child: Text(
-                    '${time.sec}',
-                    style: kCountdownNumberTextStyle,
-                  ),
+                GradientText(
+                  '${time.sec}',
+                  colors: const <Color>[
+                    Color(0XFF8BC6EC),
+                    Color(0XFF9599E2),
+                  ],
                 ),
-
                 const Text(
                   'SECS',
                   style: kCountdownSubtitleTextStyle,
