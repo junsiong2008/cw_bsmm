@@ -59,5 +59,6 @@ class DefaultFirebaseOptions {
     projectId: 'cw-bsmm-prd',
     authDomain: 'cw-bsmm-prd.firebaseapp.com',
     storageBucket: 'cw-bsmm-prd.appspot.com',
+    measurementId: 'G-9M3D8NXSMJ',
   );
 }
