@@ -13,6 +13,7 @@ class CountdownGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Using GradientText package
     return CountdownTimer(
       endTime: millisecondsToDate,
       widgetBuilder: (BuildContext context, CurrentRemainingTime? time) {

@@ -11,6 +11,7 @@ class Participant {
   String? secondarySchool;
   String? unit;
   DateTime datetimeCreated;
+  bool isPaid = false;
 
   Participant({
     required this.englishName,
@@ -25,6 +26,7 @@ class Participant {
     this.allergic,
     this.secondarySchool,
     this.unit,
+    this.isPaid = false,
   });
 
   Map<String, dynamic> toJson() => _participantToJson(this);
@@ -45,7 +47,8 @@ class Participant {
         'allergic': participant.allergic,
         'secondarySchool': participant.secondarySchool,
         'unit': participant.unit,
-        'datetimeCreated': participant.datetimeCreated
+        'datetimeCreated': participant.datetimeCreated,
+        'isPaid': 'false',
       };
 }
 
@@ -64,5 +67,6 @@ Participant _participantFromJson(Map<String, dynamic> json) {
     unit: json['unit'] as String?,
     datetimeCreated: DateTime.fromMillisecondsSinceEpoch(
         json['createdOn'].millisecondsSinceEpoch),
+    isPaid: json['isPaid'] as bool,
   );
 }
