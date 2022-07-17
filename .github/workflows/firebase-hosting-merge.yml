@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - |
+      - run: |
           mkdir lib/auth
           echo $SECRETS_FILE_CONTENT | base64 -di > lib/auth/secrets.dart 
           sudo snap install flutter --classic

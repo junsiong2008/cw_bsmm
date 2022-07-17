@@ -7,7 +7,6 @@ import 'package:cw_bsmm/providers/registration_state_provider.dart';
 import 'package:cw_bsmm/components/ui/registration_form.dart';
 import 'package:cw_bsmm/services/analytics.dart';
 import 'package:cw_bsmm/shared/constants.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
