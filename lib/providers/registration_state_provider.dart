@@ -24,12 +24,6 @@ class RegistrationStateProvider extends ChangeNotifier {
       errorString = error.toString();
     });
 
-    // await Future.delayed(Duration(seconds: 5), () {
-    //   loading = false;
-    //   success = true;
-    //   fail = false;
-    // });
-
     notifyListeners();
   }
 
