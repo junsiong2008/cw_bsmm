@@ -12,18 +12,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
-  // TODO: Change this later
   const HomePage({
     Key? key,
-    required this.analytics,
-    required this.observer,
   }) : super(key: key);
-  final FirebaseAnalytics analytics;
-  final FirebaseAnalyticsObserver observer;
-
-  // const HomePage({
-  //   Key? key,
-  // }) : super(key: key);
 
   void closeModalBottomSheet(BuildContext context) {
     var registrationStateProvider = Provider.of<RegistrationStateProvider>(
@@ -154,13 +145,6 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       onPressed: () async {
-                        await analytics.logEvent(
-                          name: 'test_event_two',
-                          parameters: <String, dynamic>{
-                            'string': 'test_event_2'
-                          },
-                        );
-                        // TODO: Change this
                         await Analytics.logAnalyticsEvent(
                           eventName: 'display_registration_form',
                           eventParam: 'Display registration form',

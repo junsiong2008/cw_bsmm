@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cw_bsmm/auth/secrets.dart';
+import 'package:cw_bsmm/services/analytics.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,17 +37,12 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-  // TODO: Remove this later
-  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-  static FirebaseAnalyticsObserver observer =
-      FirebaseAnalyticsObserver(analytics: analytics);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorObservers: <NavigatorObserver>[observer],
-      // navigatorObservers: <NavigatorObserver>[Analytics.observer],
+      navigatorObservers: <NavigatorObserver>[Analytics.observer],
       title: 'BSMM 55th Enrollment Ceremony',
       theme: ThemeData(
         fontFamily: 'Roboto',
@@ -54,11 +50,7 @@ class MyApp extends StatelessWidget {
           primary: kPrimaryColor,
         ),
       ),
-      // home: const HomePage(),
-      home: HomePage(
-        analytics: analytics,
-        observer: observer,
-      ),
+      home: const HomePage(),
     );
   }
 }

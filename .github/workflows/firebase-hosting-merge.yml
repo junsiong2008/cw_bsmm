@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - |
           mkdir lib/auth
           echo $SECRETS_FILE_CONTENT | base64 -di > lib/auth/secrets.dart 
           sudo snap install flutter --classic
@@ -19,12 +19,9 @@ jobs:
           flutter config --enable-web
           flutter pub get
           flutter build web
-        env:
-          SECRETS_FILE_CONTENT: ${{ secrets.SECRETS_FILE_CONTENT }}
-        
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CW_BSMM_PRD }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CW_BSMM_2022 }}'
           channelId: live
-          projectId: cw-bsmm-prd
+          projectId: cw-bsmm-2022
