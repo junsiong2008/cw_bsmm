@@ -31,12 +31,6 @@ class CountdownGroup extends StatelessWidget {
                   Color(0XFFFF930F),
                   Color(0XFFFFF95B),
                 ]),
-                Text(
-                  '${time.days}',
-                  style: kCountdownNumberTextStyle.copyWith(
-                    color: Colors.white,
-                  ),
-                ),
                 const Text(
                   'DAYS',
                   style: kCountdownSubtitleTextStyle,
