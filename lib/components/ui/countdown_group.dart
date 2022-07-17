@@ -43,7 +43,7 @@ class CountdownGroup extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GradientText(
-                  '${time.min}',
+                  '${time.hours}',
                   style: kCountdownNumberTextStyle,
                   colors: const <Color>[
                     Color(0xFFFFFB7D),
