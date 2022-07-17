@@ -104,12 +104,19 @@ class CountdownGroup extends StatelessWidget {
                 //     Color(0XFF9599E2),
                 //   ]),
                 // ),
-                Text(
-                  '${time.sec}',
-                  style: kCountdownNumberTextStyle.copyWith(
-                    color: Colors.white,
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (bounds) => const LinearGradient(
+                          colors: [Color(0XFF8BC6EC), Color(0XFF9599E2)])
+                      .createShader(
+                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                  ),
+                  child: Text(
+                    '${time.sec}',
+                    style: kCountdownNumberTextStyle,
                   ),
                 ),
+
                 const Text(
                   'SECS',
                   style: kCountdownSubtitleTextStyle,
