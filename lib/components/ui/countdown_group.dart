@@ -27,10 +27,20 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.days}', colors: <Color>[
-                  Color(0XFFFF930F),
-                  Color(0XFFFFF95B),
-                ]),
+                // GradientText(
+                //   '${time.days}',
+                //   style: kCountdownNumberTextStyle,
+                //   gradient: const LinearGradient(colors: [
+                //     Color(0XFFff930f),
+                //     Color(0XFFfff95b),
+                //   ]),
+                // ),
+                Text(
+                  '${time.days}',
+                  style: kCountdownNumberTextStyle.copyWith(
+                    color: Colors.white,
+                  ),
+                ),
                 const Text(
                   'DAYS',
                   style: kCountdownSubtitleTextStyle,
@@ -40,10 +50,22 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.min}', colors: <Color>[
-                  Color(0xFFFFFB7D),
-                  Color(0XFF85FFBD),
-                ]),
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (bounds) => const LinearGradient(
+                          colors: [Color(0xFFFFFB7D), Color(0XFF85FFBD)])
+                      .createShader(
+                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                  ),
+                  child: Text(
+                    '${time.sec}',
+                    style: kCountdownNumberTextStyle,
+                  ),
+                ),
+                // GradientText('${time.min}', colors: const <Color>[
+                //   Color(0xFFFFFB7D),
+                //   Color(0XFF85FFBD),
+                // ]),
                 const Text(
                   'HOURS',
                   style: kCountdownSubtitleTextStyle,
@@ -53,10 +75,22 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.min}', colors: <Color>[
-                  Color(0XFF8EC5FC),
-                  Color(0XFFE0C3F3),
-                ]),
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (bounds) => const LinearGradient(
+                          colors: [Color(0XFF8EC5FC), Color(0XFFE0C3F3)])
+                      .createShader(
+                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                  ),
+                  child: Text(
+                    '${time.sec}',
+                    style: kCountdownNumberTextStyle,
+                  ),
+                ),
+                // GradientText('${time.min}', colors: const <Color>[
+                //   Color(0XFF8EC5FC),
+                //   Color(0XFFE0C3F3),
+                // ]),
                 const Text(
                   'MINS',
                   style: kCountdownSubtitleTextStyle,
@@ -66,13 +100,28 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText(
-                  '${time.sec}',
-                  colors: <Color>[
-                    Color(0XFF8BC6EC),
-                    Color(0XFF9599E2),
-                  ],
+                // GradientText(
+                //   '${time.sec}',
+                //   style: kCountdownNumberTextStyle,
+                //   gradient: const LinearGradient(colors: [
+                //     Color(0XFF8BC6EC),
+                //     Color(0XFF9599E2),
+                //   ]),
+                // ),
+
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback: (bounds) => const LinearGradient(
+                          colors: [Color(0XFF8BC6EC), Color(0XFF9599E2)])
+                      .createShader(
+                    Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+                  ),
+                  child: Text(
+                    '${time.sec}',
+                    style: kCountdownNumberTextStyle,
+                  ),
                 ),
+
                 const Text(
                   'SECS',
                   style: kCountdownSubtitleTextStyle,
