@@ -12,6 +12,7 @@ class Participant {
   String? unit;
   DateTime datetimeCreated;
   bool isPaid = false;
+  bool isAttended = false;
 
   Participant({
     required this.englishName,
@@ -27,6 +28,7 @@ class Participant {
     this.secondarySchool,
     this.unit,
     this.isPaid = false,
+    this.isAttended = false,
   });
 
   Map<String, dynamic> toJson() => _participantToJson(this);
@@ -48,7 +50,8 @@ class Participant {
         'secondarySchool': participant.secondarySchool,
         'unit': participant.unit,
         'datetimeCreated': participant.datetimeCreated,
-        'isPaid': 'false',
+        'isPaid': participant.isPaid,
+        'isAttended': participant.isAttended,
       };
 }
 
