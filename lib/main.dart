@@ -15,9 +15,10 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await FirebaseAppCheck.instance.activate(
-    webRecaptchaSiteKey: webRecaptchaSiteKey,
-  );
+  // TODO: Changes
+  // await FirebaseAppCheck.instance.activate(
+  //   webRecaptchaSiteKey: webRecaptchaSiteKey,
+  // );
 
   runApp(
     MultiProvider(

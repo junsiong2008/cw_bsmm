@@ -40,10 +40,11 @@ class _RegistrationFormState extends State<RegistrationForm> {
     RegistrationFormProvider registrationFormProvider,
     RegistrationStateProvider registrationStateProvider,
   ) async {
-    await Analytics.logAnalyticsEvent(
-      eventName: 'submit_registration_form',
-      eventParam: 'Submit registration form',
-    );
+    // TODO: Changes
+    // await Analytics.logAnalyticsEvent(
+    //   eventName: 'submit_registration_form',
+    //   eventParam: 'Submit registration form',
+    // );
 
     bool validated = true;
 
