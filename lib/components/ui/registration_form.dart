@@ -59,7 +59,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
 
     if (validated) {
       Participant participant = Participant(
-          englishName: registrationFormProvider.emailAddress!,
+          englishName: registrationFormProvider.englishName!,
           chineseName: registrationFormProvider.chineseName,
           icNumber: registrationFormProvider.icNumber!,
           phoneNumber: registrationFormProvider.phoneNumber!,
