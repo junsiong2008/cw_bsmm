@@ -94,7 +94,7 @@ class HomePage extends StatelessWidget {
                             color: Colors.white,
                           ),
                           Text(
-                            '20th August 2022, 7pm - 10pm',
+                            '20th August 2022, 5.00pm',
                             style: kVenueDateTextStyle,
                             textAlign: TextAlign.center,
                           ),
@@ -124,7 +124,7 @@ class HomePage extends StatelessWidget {
                     height: 16.0,
                   ),
                   CountdownGroup(
-                    millisecondsToDate: DateTime.parse('2022-08-20 19:00:00Z')
+                    millisecondsToDate: DateTime.parse('2022-08-20 17:00:00Z')
                         .millisecondsSinceEpoch,
                   ),
                   const SizedBox(
