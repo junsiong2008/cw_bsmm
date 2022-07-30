@@ -79,7 +79,6 @@ class HomePage extends StatelessWidget {
                     height: 8.0,
                   ),
                   // Wrap(
-                  //   // direction: Axis.vertical,
                   //   spacing: 8.0,
                   //   runSpacing: 4.0,
                   //   alignment: WrapAlignment.center,
