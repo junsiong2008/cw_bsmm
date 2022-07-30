@@ -25,6 +25,11 @@ const TextStyle kVenueDateTextStyle = TextStyle(
   color: Colors.white,
 );
 
+const TextStyle kTimeTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 12.0,
+);
+
 const TextStyle kModalSheetTitleTextStyle = TextStyle(
   color: kPrimaryColor,
   fontSize: 18,

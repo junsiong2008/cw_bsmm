@@ -79,29 +79,14 @@ class HomePage extends StatelessWidget {
                     height: 8.0,
                   ),
                   Wrap(
+                    // direction: Axis.vertical,
                     spacing: 8.0,
                     runSpacing: 4.0,
                     alignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+
                     children: [
                       Wrap(
-                        alignment: WrapAlignment.center,
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        spacing: 4.0,
-                        runSpacing: 8.0,
-                        children: const [
-                          Icon(
-                            Icons.schedule,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            '20th August 2022, 5.00pm',
-                            style: kVenueDateTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                      Wrap(
-                        // mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: WrapCrossAlignment.center,
                         alignment: WrapAlignment.center,
                         spacing: 4.0,
@@ -112,10 +97,32 @@ class HomePage extends StatelessWidget {
                             color: Colors.white,
                           ),
                           Text(
-                            'SMJK Chan Wa',
+                            'SMJK Chan Wa Hall',
                             style: kVenueDateTextStyle,
                             textAlign: TextAlign.center,
                           ),
+                        ],
+                      ),
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        alignment: WrapAlignment.center,
+                        spacing: 8.0,
+                        runSpacing: 8.0,
+                        children: const [
+                          Icon(
+                            Icons.schedule,
+                            color: Colors.white,
+                          ),
+                          Text(
+                            '20th August 2022',
+                            style: kVenueDateTextStyle,
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            '7.30am - 10.00am, 3.30pm - 8.30pm',
+                            style: kVenueDateTextStyle,
+                            textAlign: TextAlign.center,
+                          )
                         ],
                       ),
                     ],
@@ -124,7 +131,7 @@ class HomePage extends StatelessWidget {
                     height: 16.0,
                   ),
                   CountdownGroup(
-                    millisecondsToDate: DateTime.parse('2022-08-20 17:00:00Z')
+                    millisecondsToDate: DateTime.parse('2022-08-20 07:30:00Z')
                         .millisecondsSinceEpoch,
                   ),
                   const SizedBox(

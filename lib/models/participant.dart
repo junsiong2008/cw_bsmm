@@ -1,3 +1,5 @@
+import 'package:cw_bsmm/models/payment_update.dart';
+
 class Participant {
   String englishName;
   String? chineseName;
@@ -13,6 +15,7 @@ class Participant {
   DateTime datetimeCreated;
   bool isPaid = false;
   bool isAttended = false;
+  List<PaymentUpdate>? paymentUpdates;
 
   Participant({
     required this.englishName,
@@ -29,6 +32,7 @@ class Participant {
     this.unit,
     this.isPaid = false,
     this.isAttended = false,
+    this.paymentUpdates,
   });
 
   Map<String, dynamic> toJson() => _participantToJson(this);
@@ -52,6 +56,11 @@ class Participant {
         'datetimeCreated': participant.datetimeCreated,
         'isPaid': participant.isPaid,
         'isAttended': participant.isAttended,
+        'paymentUpdates': participant.paymentUpdates == null
+            ? null
+            : participant.paymentUpdates!
+                .map((update) => update.paymentUpdateToJson())
+                .toList(),
       };
 }
 
@@ -69,7 +78,7 @@ Participant _participantFromJson(Map<String, dynamic> json) {
     secondarySchool: json['secondarySchool'] as String?,
     unit: json['unit'] as String?,
     datetimeCreated: DateTime.fromMillisecondsSinceEpoch(
-        json['createdOn'].millisecondsSinceEpoch),
+        json['datetimeCreated'].millisecondsSinceEpoch),
     isPaid: json['isPaid'] as bool,
   );
 }
