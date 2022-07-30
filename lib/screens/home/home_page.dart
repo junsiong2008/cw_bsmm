@@ -78,13 +78,13 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 8.0,
                   ),
-                  Wrap(
-                    // direction: Axis.vertical,
-                    spacing: 8.0,
-                    runSpacing: 4.0,
-                    alignment: WrapAlignment.center,
-                    crossAxisAlignment: WrapCrossAlignment.center,
-
+                  // Wrap(
+                  //   // direction: Axis.vertical,
+                  //   spacing: 8.0,
+                  //   runSpacing: 4.0,
+                  //   alignment: WrapAlignment.center,
+                  //   crossAxisAlignment: WrapCrossAlignment.center,
+                  Column(
                     children: [
                       Wrap(
                         crossAxisAlignment: WrapCrossAlignment.center,
@@ -102,6 +102,9 @@ class HomePage extends StatelessWidget {
                             textAlign: TextAlign.center,
                           ),
                         ],
+                      ),
+                      const SizedBox(
+                        height: 8.0,
                       ),
                       Wrap(
                         crossAxisAlignment: WrapCrossAlignment.center,
@@ -128,7 +131,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 16.0,
+                    height: 20.0,
                   ),
                   CountdownGroup(
                     millisecondsToDate: DateTime.parse('2022-08-20 07:30:00Z')
