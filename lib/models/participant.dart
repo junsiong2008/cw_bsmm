@@ -1,4 +1,5 @@
 import 'package:cw_bsmm/models/payment_update.dart';
+import 'package:cw_bsmm/models/attendance_update.dart';
 
 class Participant {
   String englishName;
@@ -16,6 +17,7 @@ class Participant {
   bool isPaid = false;
   bool isAttended = false;
   List<PaymentUpdate>? paymentUpdates;
+  List<AttendanceUpdate>? attendanceUpdates;
 
   Participant({
     required this.englishName,
@@ -33,6 +35,7 @@ class Participant {
     this.isPaid = false,
     this.isAttended = false,
     this.paymentUpdates,
+    this.attendanceUpdates,
   });
 
   Map<String, dynamic> toJson() => _participantToJson(this);
@@ -61,6 +64,11 @@ class Participant {
             : participant.paymentUpdates!
                 .map((update) => update.paymentUpdateToJson())
                 .toList(),
+        'attendanceUpdates': participant.attendanceUpdates == null
+            ? null
+            : participant.attendanceUpdates!
+                .map((update) => update.attendanceUpdateToJson())
+                .toList(),
       };
 }
 
@@ -80,5 +88,15 @@ Participant _participantFromJson(Map<String, dynamic> json) {
     datetimeCreated: DateTime.fromMillisecondsSinceEpoch(
         json['datetimeCreated'].millisecondsSinceEpoch),
     isPaid: json['isPaid'] as bool,
+    paymentUpdates: json['paymentUpdates'] == null
+        ? null
+        : json['paymentUpdates']
+            .map((data) => PaymentUpdate.fromJson(data))
+            .toList() as List<PaymentUpdate>?,
+    attendanceUpdates: json['attendanceUpdates'] == null
+        ? null
+        : json['attendanceUpdates']
+            .map((data) => AttendanceUpdate.fromJson(data))
+            .toList() as List<AttendanceUpdate>?,
   );
 }
