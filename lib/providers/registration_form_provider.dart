@@ -94,9 +94,9 @@ class RegistrationFormProvider extends ChangeNotifier {
     unit = 'Bulan Sabit Merah Malaysia';
     otherSecondarySchool = null;
     otherUnit = null;
-
     halalOption = HalalOption.halal;
     vegetarianOption = VegetarianOption.vegetarian;
     studentStatus = StudentStatus.student;
+    notifyListeners();
   }
 }

@@ -88,6 +88,45 @@ class _StudentStatusGroupState extends State<StudentStatusGroup> {
         const SizedBox(
           height: 8.0,
         ),
+        if (provider.studentStatus == StudentStatus.exStudent)
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 8.0,
+              ),
+              const Text(
+                'Previous Uniform Body (Badan Beruniform)',
+                style: kFormFieldLabelTextStyle,
+              ),
+              DropdownButtonFormField(
+                isExpanded: true,
+                hint: const Text('Choose a Unit'),
+                value: provider.unit,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+                items:
+                    kChanWaExUnit.map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: provider.updateUnit,
+              ),
+            ],
+          ),
+        if (provider.studentStatus == StudentStatus.exStudent &&
+            provider.unit == 'Other')
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: RegistrationFormField(
+              label: 'Other (Please specify your previous unit):',
+              textEditingController: widget.otherUnitController,
+              onChanged: provider.updateOtherUnit,
+            ),
+          ),
         if (provider.studentStatus == StudentStatus.student)
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

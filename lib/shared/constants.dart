@@ -112,3 +112,20 @@ const List<String> kChanWaUnit = [
   'Kelab Tarian',
   'Other',
 ];
+
+const List<String> kChanWaExUnit = [
+  'Bulan Sabit Merah Malaysia',
+  'Gendang 24',
+  'Goshin-Ryu Karate',
+  'Kadet Angkatan Sekolah Pertahanan Awam',
+  'Kadet Pengangkutan Jalan',
+  'Kadet Polis',
+  'Kadet Remaja Sekolah',
+  'Kadet Tentera Barat-PKBM',
+  'Pancaragam',
+  'Pandu Puteri',
+  'Pengakap',
+  'Taekwando',
+  'Wushu',
+  'Other',
+];
