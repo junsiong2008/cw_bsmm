@@ -84,9 +84,9 @@ class _RegistrationFormState extends State<RegistrationForm> {
               : registrationFormProvider.otherUnit,
           datetimeCreated: DateTime.now());
 
-      registrationStateProvider.registerUser(participant);
-      registrationStateProvider.resetState();
-      registrationFormProvider.resetForm();
+      await registrationStateProvider.registerUser(participant);
+      // registrationStateProvider.resetState();
+      // registrationFormProvider.resetForm();
     }
   }
 
