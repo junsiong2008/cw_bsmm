@@ -139,34 +139,51 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 16.0,
                   ),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        shape: const StadiumBorder(),
-                        minimumSize: const Size(120, 48),
-                      ),
-                      child: const Text(
-                        'Register',
-                        style: TextStyle(
-                          color: kPrimaryColor,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      onPressed: () async {
-                        await Analytics.logAnalyticsEvent(
-                          eventName: 'display_registration_form',
-                          eventParam: 'Display registration form',
-                        );
-                        showModalBottomSheet<dynamic>(
-                          isScrollControlled: true,
-                          context: context,
-                          isDismissible: false,
-                          builder: (BuildContext context) {
-                            return buildModalBottomSheet(context);
-                          },
-                        );
-                      })
+                  DateTime.now().isBefore(DateTime(2022, 8, 13))
+                      ? ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                            shape: const StadiumBorder(),
+                            minimumSize: const Size(120, 48),
+                          ),
+                          child: const Text(
+                            'Register',
+                            style: TextStyle(
+                              color: kPrimaryColor,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          onPressed: () async {
+                            await Analytics.logAnalyticsEvent(
+                              eventName: 'display_registration_form',
+                              eventParam: 'Display registration form',
+                            );
+                            showModalBottomSheet<dynamic>(
+                              isScrollControlled: true,
+                              context: context,
+                              isDismissible: false,
+                              builder: (BuildContext context) {
+                                return buildModalBottomSheet(context);
+                              },
+                            );
+                          })
+                      : ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                            shape: const StadiumBorder(),
+                            minimumSize: const Size(120, 48),
+                          ),
+                          onPressed: null,
+                          child: const Text(
+                            'Registration Closed',
+                            style: TextStyle(
+                              color: Colors.white60,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        )
                 ],
               ),
             ),
