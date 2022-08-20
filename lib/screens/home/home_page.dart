@@ -133,8 +133,8 @@ class HomePage extends StatelessWidget {
                     height: 20.0,
                   ),
                   CountdownGroup(
-                    millisecondsToDate: DateTime.parse('2022-08-20 07:30:00Z')
-                        .millisecondsSinceEpoch,
+                    millisecondsToDate:
+                        DateTime(2022, 8, 20, 7, 30).millisecondsSinceEpoch,
                   ),
                   const SizedBox(
                     height: 16.0,

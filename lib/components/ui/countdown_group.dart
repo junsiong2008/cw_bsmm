@@ -17,9 +17,9 @@ class CountdownGroup extends StatelessWidget {
     return CountdownTimer(
       endTime: millisecondsToDate,
       widgetBuilder: (BuildContext context, CurrentRemainingTime? time) {
-        if (time == null) {
-          return const SizedBox();
-        }
+        // if (time == null) {
+        //   return const SizedBox();
+        // }
         return Wrap(
           alignment: WrapAlignment.center,
           runSpacing: 8.0,
@@ -28,7 +28,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.days}',
+                GradientText('${time?.days ?? 0}',
                     style: kCountdownNumberTextStyle,
                     colors: const [
                       Color(0XFFff930f),
@@ -44,7 +44,7 @@ class CountdownGroup extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GradientText(
-                  '${time.hours}',
+                  '${time?.hours ?? 0}',
                   style: kCountdownNumberTextStyle,
                   colors: const <Color>[
                     Color(0xFFFFFB7D),
@@ -60,7 +60,7 @@ class CountdownGroup extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GradientText('${time.min}',
+                GradientText('${time?.min ?? 0}',
                     style: kCountdownNumberTextStyle,
                     colors: const <Color>[
                       Color(0XFF8EC5FC),
@@ -76,7 +76,7 @@ class CountdownGroup extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GradientText(
-                  '${time.sec}',
+                  '${time?.sec ?? 0}',
                   style: kCountdownNumberTextStyle,
                   colors: const <Color>[
                     Color(0XFF8BC6EC),
