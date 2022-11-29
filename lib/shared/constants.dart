@@ -129,3 +129,10 @@ const List<String> kChanWaExUnit = [
   'Wushu',
   'Other',
 ];
+
+// DateTime eventDatetime = DateTime(2022, 8, 20, 7, 30);
+
+// DateTime registrationClosedDate = DateTime(2022, 8, 13);
+
+DateTime eventDatetime = DateTime(2022, 12, 31, 7, 30);
+DateTime registrationClosedDate = DateTime(2022, 12, 31);

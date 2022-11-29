@@ -133,16 +133,15 @@ class HomePage extends StatelessWidget {
                     height: 20.0,
                   ),
                   CountdownGroup(
-                    millisecondsToDate:
-                        DateTime(2022, 8, 20, 7, 30).millisecondsSinceEpoch,
+                    millisecondsToDate: eventDatetime.millisecondsSinceEpoch,
                   ),
                   const SizedBox(
                     height: 16.0,
                   ),
-                  DateTime.now().isBefore(DateTime(2022, 8, 13))
+                  DateTime.now().isBefore(registrationClosedDate)
                       ? ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: const StadiumBorder(),
                             minimumSize: const Size(120, 48),
                           ),
@@ -170,7 +169,7 @@ class HomePage extends StatelessWidget {
                           })
                       : ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: const StadiumBorder(),
                             minimumSize: const Size(120, 48),
                           ),
