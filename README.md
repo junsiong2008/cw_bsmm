@@ -8,6 +8,13 @@ This repository stores the source code of a simple event registration website bu
 ![home_page](./screenshots/home.png)
 ![registration_form](./screenshots/registration_form.png)
 
+<br/>
+
+## Registration Process
+![registration_process](./screenshots/registration_process.gif)
+
+<br/>
+
 ## Pre-requisites
 This project uses the following SDKs:
 ```
