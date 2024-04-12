@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 class CountdownGroup extends StatelessWidget {
   const CountdownGroup({
-    Key? key,
+    super.key,
     required this.millisecondsToDate,
-  }) : super(key: key);
+  });
 
   final int millisecondsToDate;
 

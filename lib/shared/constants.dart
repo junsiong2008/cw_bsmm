@@ -130,6 +130,6 @@ const List<String> kChanWaExUnit = [
   'Other',
 ];
 
-DateTime eventDatetime = DateTime(2022, 8, 20, 7, 30);
+DateTime eventDatetime = DateTime(2024, 5, 11, 15, 00);
 
-DateTime registrationClosedDate = DateTime(2022, 8, 13);
+DateTime registrationClosedDate = DateTime(2024, 5, 20);

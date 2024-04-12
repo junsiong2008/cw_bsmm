@@ -12,8 +12,8 @@ import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   void closeModalBottomSheet(BuildContext context) {
     var registrationStateProvider = Provider.of<RegistrationStateProvider>(
@@ -38,8 +38,9 @@ class HomePage extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/summer_night.jpg'),
+                image: AssetImage('assets/images/gold-background.jpg'),
                 fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(Colors.black45, BlendMode.darken),
               ),
             ),
           ),
@@ -51,7 +52,7 @@ class HomePage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
-                    '夏夜',
+                    '烟火·璀璨',
                     style: kMainTitleTextStyle,
                     textAlign: TextAlign.center,
                   ),
@@ -69,7 +70,7 @@ class HomePage extends StatelessWidget {
                         height: 50,
                       ),
                       const Text(
-                        '55th Enrolment Ceremony Farewell and Welcome Gathering 2022',
+                        '56th Enrolment Ceremony Farewell and Welcome Gathering 2024',
                         textAlign: TextAlign.center,
                         style: kMainSubtitleTextStyle,
                       ),
@@ -83,14 +84,14 @@ class HomePage extends StatelessWidget {
                   //   runSpacing: 4.0,
                   //   alignment: WrapAlignment.center,
                   //   crossAxisAlignment: WrapCrossAlignment.center,
-                  Column(
+                  const Column(
                     children: [
                       Wrap(
                         crossAxisAlignment: WrapCrossAlignment.center,
                         alignment: WrapAlignment.center,
                         spacing: 4.0,
                         runSpacing: 8.0,
-                        children: const [
+                        children: [
                           Icon(
                             Icons.pin_drop_outlined,
                             color: Colors.white,
@@ -102,7 +103,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 8.0,
                       ),
                       Wrap(
@@ -110,18 +111,18 @@ class HomePage extends StatelessWidget {
                         alignment: WrapAlignment.center,
                         spacing: 8.0,
                         runSpacing: 8.0,
-                        children: const [
+                        children: [
                           Icon(
                             Icons.schedule,
                             color: Colors.white,
                           ),
                           Text(
-                            '20th August 2022',
+                            '11th May 2024',
                             style: kVenueDateTextStyle,
                             textAlign: TextAlign.center,
                           ),
                           Text(
-                            '7.30am - 10.00am, 3.30pm - 8.30pm',
+                            '3.00pm - 9.30pm',
                             style: kVenueDateTextStyle,
                             textAlign: TextAlign.center,
                           )
@@ -158,14 +159,16 @@ class HomePage extends StatelessWidget {
                               eventName: 'display_registration_form',
                               eventParam: 'Display registration form',
                             );
-                            showModalBottomSheet<dynamic>(
-                              isScrollControlled: true,
-                              context: context,
-                              isDismissible: false,
-                              builder: (BuildContext context) {
-                                return buildModalBottomSheet(context);
-                              },
-                            );
+                            if (context.mounted) {
+                              showModalBottomSheet<dynamic>(
+                                isScrollControlled: true,
+                                context: context,
+                                isDismissible: false,
+                                builder: (BuildContext context) {
+                                  return buildModalBottomSheet(context);
+                                },
+                              );
+                            }
                           })
                       : ElevatedButton(
                           style: ElevatedButton.styleFrom(
