@@ -5,6 +5,7 @@
   },
   "hosting": {
     "public": "build/web",
+    "site": "cw-bsmm-2024",
     "ignore": [
       "firebase.json",
       "**/.*",
