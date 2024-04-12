@@ -9,7 +9,7 @@ const TextStyle kCountdownSubtitleTextStyle = TextStyle(
 
 const TextStyle kMainTitleTextStyle = TextStyle(
   color: Colors.white,
-  fontSize: 64,
+  fontSize: 56,
   letterSpacing: 16,
   fontFamily: 'NotoSansSC',
 );
