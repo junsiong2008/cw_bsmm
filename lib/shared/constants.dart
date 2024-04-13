@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color kPrimaryColor = Color(0xFF0F4E9D);
+const Color kPrimaryColor = Color(0xFF481E14);
 
 const TextStyle kCountdownSubtitleTextStyle = TextStyle(
   color: Colors.white54,

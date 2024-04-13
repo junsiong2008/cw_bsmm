@@ -6,6 +6,7 @@ import 'package:cw_bsmm/models/participant.dart';
 import 'package:cw_bsmm/providers/registration_form_provider.dart';
 import 'package:cw_bsmm/providers/registration_state_provider.dart';
 import 'package:cw_bsmm/services/analytics.dart';
+import 'package:cw_bsmm/shared/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -269,6 +270,10 @@ class _RegistrationFormState extends State<RegistrationForm> {
                 child: Row(
                   children: [
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: kPrimaryColor,
+                        foregroundColor: Colors.white,
+                      ),
                       onPressed: details.onStepContinue,
                       child: const Text('Continue'),
                     ),
@@ -284,6 +289,10 @@ class _RegistrationFormState extends State<RegistrationForm> {
                         Row(
                           children: [
                             ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: kPrimaryColor,
+                                foregroundColor: Colors.white,
+                              ),
                               onPressed: () async {
                                 // Experimental Code
                                 var registrationStateProvider =
@@ -315,6 +324,10 @@ class _RegistrationFormState extends State<RegistrationForm> {
                     child: Row(
                       children: [
                         ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: kPrimaryColor,
+                            foregroundColor: Colors.white,
+                          ),
                           onPressed: details.onStepContinue,
                           child: const Text('Continue'),
                         ),

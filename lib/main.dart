@@ -45,8 +45,9 @@ class MyApp extends StatelessWidget {
       title: 'BSMM 55th Enrolment Ceremony',
       theme: ThemeData(
         fontFamily: 'Roboto',
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: kPrimaryColor,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: kPrimaryColor,
+          brightness: Brightness.light,
         ),
       ),
       home: const HomePage(),
