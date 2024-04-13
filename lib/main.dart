@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: <NavigatorObserver>[Analytics.observer],
-      title: 'BSMM 55th Enrolment Ceremony',
+      title: 'BSMM 56th Enrolment Ceremony',
       theme: ThemeData(
         fontFamily: 'Roboto',
         colorScheme: ColorScheme.fromSeed(
