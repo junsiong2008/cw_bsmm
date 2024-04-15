@@ -60,30 +60,34 @@ class _RegistrationFormState extends State<RegistrationForm> {
 
     if (validated) {
       Participant participant = Participant(
-          englishName: registrationFormProvider.englishName!,
-          chineseName: registrationFormProvider.chineseName,
-          icNumber: registrationFormProvider.icNumber!,
-          phoneNumber: registrationFormProvider.phoneNumber!,
-          emailAddress: registrationFormProvider.emailAddress!,
-          isHalal: registrationFormProvider.halalOption == HalalOption.halal
-              ? true
-              : false,
-          isVegetarian: registrationFormProvider.vegetarianOption ==
-                  VegetarianOption.vegetarian
-              ? true
-              : false,
-          allergic: registrationFormProvider.allergic,
-          studentStatus:
-              registrationFormProvider.studentStatus == StudentStatus.student
-                  ? 'Student'
-                  : 'Ex-Student',
-          secondarySchool: registrationFormProvider.secondarySchool != 'Other'
-              ? registrationFormProvider.secondarySchool
-              : registrationFormProvider.otherSecondarySchool,
-          unit: registrationFormProvider.unit != 'Other'
-              ? registrationFormProvider.unit
-              : registrationFormProvider.otherUnit,
-          datetimeCreated: DateTime.now());
+        englishName: registrationFormProvider.englishName!,
+        chineseName: registrationFormProvider.chineseName,
+        icNumber: registrationFormProvider.icNumber!,
+        phoneNumber: registrationFormProvider.phoneNumber!,
+        emailAddress: registrationFormProvider.emailAddress!,
+        isHalal: registrationFormProvider.halalOption == HalalOption.halal
+            ? true
+            : false,
+        isVegetarian: registrationFormProvider.vegetarianOption ==
+                VegetarianOption.vegetarian
+            ? true
+            : false,
+        allergic: registrationFormProvider.allergic,
+        studentStatus:
+            registrationFormProvider.studentStatus == StudentStatus.student
+                ? 'Student'
+                : 'Ex-Student',
+        secondarySchool: registrationFormProvider.secondarySchool != 'Other'
+            ? registrationFormProvider.secondarySchool
+            : registrationFormProvider.otherSecondarySchool,
+        classroom: registrationFormProvider.secondarySchool == 'SMJK Chan Wa'
+            ? registrationFormProvider.classroom
+            : null,
+        unit: registrationFormProvider.unit != 'Other'
+            ? registrationFormProvider.unit
+            : registrationFormProvider.otherUnit,
+        datetimeCreated: DateTime.now(),
+      );
 
       await registrationStateProvider.registerUser(participant);
       // registrationStateProvider.resetState();

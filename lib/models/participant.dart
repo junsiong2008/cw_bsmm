@@ -12,6 +12,7 @@ class Participant {
   String? allergic;
   String studentStatus;
   String? secondarySchool;
+  String? classroom;
   String? unit;
   DateTime datetimeCreated;
   bool isPaid = false;
@@ -31,6 +32,7 @@ class Participant {
     this.chineseName,
     this.allergic,
     this.secondarySchool,
+    this.classroom,
     this.unit,
     this.isPaid = false,
     this.isAttended = false,
@@ -55,6 +57,7 @@ class Participant {
         'chineseName': participant.chineseName,
         'allergic': participant.allergic,
         'secondarySchool': participant.secondarySchool,
+        'classroom': participant.classroom,
         'unit': participant.unit,
         'datetimeCreated': participant.datetimeCreated,
         'isPaid': participant.isPaid,
@@ -80,6 +83,7 @@ Participant _participantFromJson(Map<String, dynamic> json) {
     chineseName: json['chineseName'] as String?,
     allergic: json['allergic'] as String?,
     secondarySchool: json['secondarySchool'] as String?,
+    classroom: json['classroom'] as String?,
     unit: json['unit'] as String?,
     datetimeCreated: DateTime.fromMillisecondsSinceEpoch(
         json['datetimeCreated'].millisecondsSinceEpoch),
