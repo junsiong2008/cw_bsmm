@@ -286,7 +286,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
               )
             : _index == 3
                 ? Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
+                    padding: const EdgeInsets.only(top: 8.0, bottom: 48),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
