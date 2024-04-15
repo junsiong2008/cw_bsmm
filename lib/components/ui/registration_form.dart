@@ -265,6 +265,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
     ];
 
     return Stepper(
+      controller: ScrollController(keepScrollOffset: false),
       controlsBuilder: ((context, details) {
         return _index == 0
             ? Padding(
@@ -286,7 +287,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
               )
             : _index == 3
                 ? Padding(
-                    padding: const EdgeInsets.only(top: 8.0, bottom: 48),
+                    padding: const EdgeInsets.only(top: 8.0, bottom: 24.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
