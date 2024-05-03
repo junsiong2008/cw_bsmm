@@ -179,4 +179,4 @@ const List<String> kChanWaClasses = [
 
 DateTime eventDatetime = DateTime(2024, 5, 11, 15, 00);
 
-DateTime registrationClosedDate = DateTime(2024, 5, 20);
+DateTime registrationClosedDate = DateTime(2024, 5, 4);
